@@ -41,6 +41,11 @@ class ViewController: UIViewController {
         
         let currentAge: Int? = Int(currentAgeTextField.text!)
         let plannedRetirementAge: Int? = Int(planedRetiremenAgeTextField.text!)
+        let monthlyInvestment: Float? = Float(monthlyInvestmentsTextField.text!)
+        let currentSavings: Float? = Float(currentSavingsTextField.text!)
+        let interestRate: Float? = Float(averageInterestsTextField.text!)
+        
+        resultLabel.text = "If you save $\(monthlyInvestment!) every month for \(plannedRetirementAge! - currentAge!) years, and invest that money plus yout current investment of \(currentSavings!) at a \(interestRate!)% anual interest rate, you will have $X by the time you are \(plannedRetirementAge!)"
         
         let properties = ["current_age" : String(currentAge!), "planned_retirement_age" : String(plannedRetirementAge!)]
         
